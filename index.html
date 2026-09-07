@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xan Abuser + Papyrus</title>
+  <style>
+    :root {
+      --bg: #000000;
+      --card: #1a0000;
+      --accent: #ff1a1a;
+      --accent2: #ff3333;
+      --text: #e0e0e0;
+      --muted: #ff1a1a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.5;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: var(--accent);
+      font-size: 1.75rem;
+      margin-bottom: 0.25rem;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid #ffffff1a;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .card h2 {
+      font-size: 1.15rem;
+      color: var(--accent2);
+      margin-bottom: 0.5rem;
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: #d0d0d0;
+      margin-bottom: 1rem;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    button, a.btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #cc0000;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      padding: 0.55rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.15s, transform 0.1s;
+    }
+    button:hover, a.btn:hover {
+      background: var(--accent);
+      transform: translateY(-1px);
+    }
+    button:active, a.btn:active {
+      transform: translateY(0);
+    }
+    button.copied {
+      background: #43b581;
+      color: #000;
+    }
+    .raw-link {
+      font-size: 0.8rem;
+      color: var(--accent2);
+      word-break: break-all;
+      margin-top: 0.75rem;
+      display: block;
+    }
+    footer {
+      margin-top: 2.5rem;
+      font-size: 0.8rem;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Xan Abuser.</h1>
+    <p class="subtitle">ive taken too many xans, why am i the way i am. im drowning in my thoughts..a little bit of wealth and love.</p>
+
+    <div class="card">
+      <h2>Theme — Xan Abuser.</h2>
+      <p>Full theme (spec 2) with colors + fonts. Click to copy the entire JSON.</p>
+      <div class="actions">
+        <button id="copy-theme" onclick="copyJSON('xan-abuser.json', this)">Copy Theme JSON</button>
+        <a class="btn" id="raw-theme" href="xan-abuser.json" target="_blank" rel="noopener">Open Raw</a>
+      </div>
+      <a class="raw-link" id="theme-url" href="xan-abuser.json"></a>
+    </div>
+
+    <div class="card">
+      <h2>Font — Papyrus</h2>
+      <p>Font pack (spec 1). Click to copy the entire JSON.</p>
+      <div class="actions">
+        <button id="copy-font" onclick="copyJSON('papyrus.json', this)">Copy Font JSON</button>
+        <a class="btn" id="raw-font" href="papyrus.json" target="_blank" rel="noopener">Open Raw</a>
+      </div>
+      <a class="raw-link" id="font-url" href="papyrus.json"></a>
+    </div>
+
+    <footer>
+      Hosted on GitHub Pages · Author: Risk/Kuai
+    </footer>
+  </div>
+
+  <script>
+    // Show absolute raw URLs once the page is on GitHub Pages
+    const base = window.location.href.replace(/\/?index\.html$/, '').replace(/\/$/, '');
+    document.getElementById('theme-url').textContent = base + '/xan-abuser.json';
+    document.getElementById('theme-url').href = base + '/xan-abuser.json';
+    document.getElementById('font-url').textContent = base + '/papyrus.json';
+    document.getElementById('font-url').href = base + '/papyrus.json';
+
+    async function copyJSON(file, btn) {
+      try {
+        const res = await fetch(file);
+        const text = await res.text();
+        await navigator.clipboard.writeText(text);
+        const original = btn.textContent;
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = original;
+          btn.classList.remove('copied');
+        }, 1800);
+      } catch (e) {
+        alert('Copy failed — open the raw file and copy manually.');
+        console.error(e);
+      }
+    }
+  </script>
+</body>
+</html>

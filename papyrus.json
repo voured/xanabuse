@@ -1,0 +1,25 @@
+{
+  "spec": 1,
+  "name": "Papyrus",
+  "previewText": "Papyrus",
+  "main": {
+    "ABCGintoNord-ExtraBold": "https://discordfonts-silly.nekoweb.org/PapyrusFont/papyrus.ttf",
+    "ggsans-Bold": "https://discordfonts-silly.nekoweb.org/PapyrusFont/papyrus.ttf",
+    "ggsans-BoldItalic": "https://discordfonts-silly.nekoweb.org/PapyrusFont/papyrus.ttf",
+    "ggsans-ExtraBold": "https://discordfonts-silly.nekoweb.org/PapyrusFont/papyrus.ttf",
+    "ggsans-ExtraBoldItalic": "https://discordfonts-silly.nekoweb.org/PapyrusFont/papyrus.ttf",
+    "ggsans-Medium": "https://discordfonts-silly.nekoweb.org/PapyrusFont/papyrus.ttf",
+    "ggsans-MediumItalic": "https://discordfonts-silly.nekoweb.org/PapyrusFont/papyrus.ttf",
+    "ggsans-Normal": "https://discordfonts-silly.nekoweb.org/PapyrusFont/papyrus.ttf",
+    "ggsans-NormalItalic": "https://discordfonts-silly.nekoweb.org/PapyrusFont/papyrus.ttf",
+    "ggsans-Semibold": "https://discordfonts-silly.nekoweb.org/PapyrusFont/papyrus.ttf",
+    "ggsans-SemiboldItalic": "https://discordfonts-silly.nekoweb.org/PapyrusFont/papyrus.ttf",
+    "NotoSans-Bold": "https://discordfonts-silly.nekoweb.org/PapyrusFont/papyrus.ttf",
+    "NotoSans-ExtraBold": "https://discordfonts-silly.nekoweb.org/PapyrusFont/papyrus.ttf",
+    "NotoSans-Medium": "https://discordfonts-silly.nekoweb.org/PapyrusFont/papyrus.ttf",
+    "NotoSans-Normal": "https://discordfonts-silly.nekoweb.org/PapyrusFont/papyrus.ttf",
+    "NotoSans-NormalItalic": "https://discordfonts-silly.nekoweb.org/PapyrusFont/papyrus.ttf",
+    "NotoSans-Semibold": "https://discordfonts-silly.nekoweb.org/PapyrusFont/papyrus.ttf",
+    "SourceCodePro-Semibold": "https://discordfonts-silly.nekoweb.org/PapyrusFont/papyrus.ttf"
+  }
+}
